@@ -1,0 +1,45 @@
+{
+  "name": "fe-monitor-server",
+  "version": "0.0.1",
+  "description": "fe-monitor-server",
+  "main": "app.js",
+  "author": "jiawei.mao",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon app.js --exec",
+    "build": "cross-env NODE_ENV=production babel src -d build"
+  },
+  "dependencies": {
+    "joi": "^13.4.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "rimraf": "^2.6.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
